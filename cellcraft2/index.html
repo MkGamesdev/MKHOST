@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+
+<!-- Mirrored from www.cellcraft.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 May 2018 06:51:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Play CellCraft | The Agar alternative game server. The best game with cool features. Eat small cells and get in the top 10 with mass. Great community and chat.">
+    <meta http-equiv="content-language" content="en">
+    <meta name="keywords" content="Agario Private Server, agar.io play game, agario online server, free agar modded game, cells, virus, petridish, bacteria, blob, game, games, web game, agario forums, agar.io community, clan wars, agar.io team tournament, fun, flash mobile">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Play Cell Craft | Best Private Server">
+    <meta property="og:description" content="Play Cell Craft - The best game on the market. Chat and play against friends, find your team and destroy lobbies with your clan. Eat cells smaller than you and dont get eaten by the bigger ones. Mobile friendly">
+    <meta property="og:url" content="index-2.html">
+    <meta property="og:image" content="../cellcraft.io/img/1200x630.html">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <title>Play CellCraft Game | Agar Private Server</title>
+    <link id="favicon" rel="icon" type="image/png" href="Circle_Blue.html">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+    <link href='css/popup.css' rel='stylesheet' type='text/css'>
+    <link href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="all">
+        @import "css/main-min67d9.css?version=2";
+        @font-face {
+          font-family: 'Ubuntu';
+          font-style: normal;
+          font-weight: 700;
+          src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(http://fonts.gstatic.com/s/ubuntu/v8/0ihfXUL2emPh0ROJezvraFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+        }
+    </style>
+    <script src="js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-2.1.3.min.js"><\/script>')</script>
+    <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/AdvertBootStrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vector2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/cce42d.js?version=1" type="text/javascript" charset="utf-8"></script>
+    <script src="js/gameclient.core41761.js?version=53" type="text/javascript" charset="utf-8"></script>
+    <script src="js/protection.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../apis.google.com/js/platform.js" async defer></script>
+    <script src="../www.google.com/recaptcha/apib091.js?render=explicit" async defer></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    // Tooltip only Text
+    $('.masterTooltip').hover(function(){
+            // Hover over code
+            var title = $(this).attr('title');
+            $(this).data('tipText', title).removeAttr('title');
+            $('<p class="tooltipz"></p>')
+            .text(title)
+            .appendTo('body')
+            .fadeIn('slow');
+    }, function() {
+            // Hover out code
+            $(this).attr('title', $(this).data('tipText'));
+            $('.tooltipz').remove();
+    }).mousemove(function(e) {
+            var mousex = e.pageX + 20;
+            var mousey = e.pageY + 10;
+            $('.tooltipz')
+            .css({ top: mousey, left: mousex })
+    });
+    });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91628536-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <body>
+
+<script>
+    var showAfterEach = 7;
+    var showAfterSeconds = 800;
+    var showFirstTime = false;
+
+    function returnTrue() {
+        // Reset clickcount and startTime
+        sessionStorage.clickcount = 0;
+        sessionStorage.startTime = new Date().getTime();
+        return true;
+    }
+
+    function checkAds() {
+        // No Web Storage support.
+        if (typeof(Storage) === "undefined") {
+            return true;
+        }
+
+        // Init clickcount and startTime
+        if (!sessionStorage.startTime) {sessionStorage.startTime = new Date().getTime();}
+        if (!sessionStorage.clickcount) {sessionStorage.clickcount = 0;}
+        sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+
+        // Check for forced close
+        if(sessionStorage.showing) {
+            return returnTrue();
+        }
+
+        // check show first time
+        if(showFirstTime == true) {
+            showFirstTime = false;
+            return returnTrue();
+        }
+
+        // Check clickcount is reached and enabled
+        if(showAfterEach > 0) {
+            if(Number(sessionStorage.clickcount) >= showAfterEach) {
+                return returnTrue();
+            }
+        }
+
+        // Check start time
+        if(showAfterSeconds > 0) {
+            var start = Number(sessionStorage.startTime);
+            var end = new Date().getTime();
+            var time = Math.round((end - start) / 1000);
+            if(time >= showAfterSeconds) {
+                return returnTrue();
+            }
+        }
+
+        // return false
+        return false;
+    }
+    </script>
+
+    <script type="text/javascript">
+        function initAipPreroll() {
+            if(typeof aipPlayer != "undefined") {
+                adplayer = new aipPlayer({
+                    AD_WIDTH: 960,
+                    AD_HEIGHT: 540,
+                    AD_FULLSCREEN: true,
+                    PREROLL_ELEM: document.getElementById('preroll'),
+                    AIP_COMPLETE: function ()  {
+                        setNick(document.getElementById('nick').value);
+                        sessionStorage.removeItem("showing");
+                        //localStorage.setItem('lcounter',parseInt(localStorage.getItem('lcounter'))+1);
+                        /*******************
+                         ***** WARNING *****
+                         *******************
+                         Please do not remove the PREROLL_ELEM
+                         from the page, it will be hidden automaticly.
+                         If you do want to remove it use the AIP_REMOVE callback below
+                        */
+                        console.log('ad complete');
+                      //  alert("Ad Completed");
+                    },
+                    AIP_REMOVE: function ()  {
+                        console.log('aip REMOVE');
+                        // Here it's save to remove the PREROLL_ELEM from the page
+                        // But it's not necessary
+                    }
+                });
+            } else {
+                setNick(document.getElementById('nick').value);
+                console.log('adblck');
+                // Failed to load the adslib ads are probably blocked
+                // don't call the startPreRoll function.
+                // it will result in an error.
+            }
+        }
+
+        function getScript (src, callback) {
+            var headElm = document.head || document.getElementsByTagName('head')[0];
+            var script = document.createElement("script");
+            var once = true;
+            script.async = "async";
+            script.type = "text/javascript";
+            script.charset = "UTF-8";
+            script.src = src;
+            script.onload = script.onreadystatechange = function () {
+                if (once && (!script.readyState || /loaded|complete/.test(script.readyState))) {
+                    once = false;
+                    callback();
+                    script.onload = script.onreadystatechange = null;
+                }
+            };
+
+            headElm.appendChild(script);
+        }
+        
+        getScript('../api.adinplay.com/player/v2/CCT/cellcraft.io/player.min.js', initAipPreroll);
+    </script>
+<div id="preroll" style="display:block;"></div>
+
+<!-- // Welcome DIV Login / Server Select // -->
+<div id="overlays" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; opacity: 1; z-index: 200; display: block; background-attachment: initial; background-color: rgba(0, 0, 0, 0.2); background-size: 100% 100%; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: no-repeat; background: #465458; 
+background-image: radial-gradient(circle, rgb(31, 97, 156) 0%, rgb(7, 21, 41) 100%);
+/*background-image: radial-gradient(circle, #8f4c4c 0%, rgb(7, 21, 41) 100%);*/
+">
+<div class="cd-popup" role="alert">
+    <div class="cd-popup-container">
+        <p>Send your friends this link to invite them to you server</p>
+        <input type="text" maxlength="30" class="form-control" id="invite-link" value="http://cellcraft.io/?server=sparta" style="margin-top: -30px;margin-bottom: 20px;">
+        <div class="cd-buttons">
+            <hr style="margin-top: 5px; margin-bottom: 5px;">
+            <a onclick="$('.cd-popup').removeClass('is-visible');">Close</a>
+        </div>
+        <a href="#0" class="cd-popup-close img-replace">Close</a>
+    </div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->
+<div id="centerLogo">
+</div>
+<div id="helloDialog" style="transform: translate(-50%, -50%) scale(1.0);">
+<!--<a href="http://cellcraft.io/buy" style="margin-left: -400px;margin-right: 15px;margin-top: -40px;/* width: 100px; */position: absolute;"> <img src="img/getcustomskin.gif" style="border-radius: 77px;margin-left: 68px; margin-top: -42px; width: 300px; position: absolute;">
+    <img src="img/sms2.png" style="margin-left: 122px;margin-top: 277px;width: 201px;position: absolute;">
+</a>-->
+<img id="ContinentDisplay" src="../cellcraft.io/img/NA2.png" width="300" height="100" border="0" class="masterTooltip" title="Europe or North America server" style="
+    position: absolute;
+    width: 60px;
+    height: 26px;
+    margin-top: 0px;
+    margin-left: 314px;
+">
+<div id="gamemodeselect" style="/* width: 430px; */position: absolute;margin-left: 14%;margin-top: -10%;">
+  <div style="position: absolute;top: -70%;font-size: 30px;left: 44%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-shadow: rgb(3, 3, 3) 4px 4px 4px;">
+   <h2>CellCraft<font color="lightgreen">+</font></h2>
+   <!--<img src="img/cellcraft.png" style=" margin-left: 60px; /* margin-right: 15px; */ margin-top: -53px; ">-->
+  </div>
+  <!--<img src="/img/cell_arrow.png" style="
+    position: absolute;
+    width: 50px;
+    margin-left: 220px;
+    margin-top: 20px;
+    opacity: 0.8;">-->
+  <div id="GMSelectRemove" onclick="getGameMode('remove');return false;" style="cursor:pointer;width:60px;height:60px;float:left;">
+    <img src="../cellcraft.io/img/arrow_left.png" width="60" height="60" border="0" style="margin-top: 34px; width: 30px; height: 27px;">
+</div>
+<img id="GameDisplay" src="../cellcraft.io/img/craft2.png" width="300" height="100" border="0" class="masterTooltip" title="Server selected" style="
+    width: 150px;
+    height: 38px;
+    margin-top: 27px;
+    margin-right: 4px;
+    margin-left: -21px;
+">
+<div id="GMSelectAdd" onclick="getGameMode('add');return false;" style="cursor:pointer;width:60px;height:60px;float:right;">
+<img src="../cellcraft.io/img/arrow_right.png" width="60" height="60" border="0" style="margin-top: 34px; width: 30px; height: 27px;">
+</div>
+</div>
+
+<div id="connecting" style="display: none; margin-bottom: -30px; margin-top: 160px;">
+    <div style="width: 320px;">
+        <center>
+            <h4>Oops</h4>
+            <p>Server is full, or your IP may have accidentally been blocked as spam. To unblock, click <a href="http://cellcraft.io/unblock">here</a><br> Unblock takes about 1 hour to 12 hours.</p>
+<!-- ///            <a href="#"><img src="img/refresh.png"></a> -->
+            <a href="#" onclick="location.reload(true);"><img src="../cellcraft.io/img/refresh.png"></a>
+        </center>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-group has-error">
+<!-- /// -->
+        <br clear="both">
+<!-- /// -->
+        <center>
+         <a href="http://cellcraft.io/skins" target="_blank"><div id="skin" style="display:none;background-size: 50px 50px;float: left;width: 50px;position: absolute;margin-top: 28px;margin-left: -19px;height: 50px;border-radius: 75px;-webkit-border-radius: 75px;-moz-border-radius: 75px;background-repeat: no-repeat;box-shadow: 0 0 8px rgba(0, 0, 0, .8);-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);">
+        </div>
+        </a>
+    <div class="taho" id="nick_holder" style="width: 244px; margin-top: 34px; box-shadow: rgb(0, 0, 0) 0px 6px 50px; opacity: 1; background: rgb(76, 68, 124);">
+         <input class="sumsginp" id="nick" style="width: 220px; height: 24px;" placeholder="Nickname" maxlength="24">
+   </div>
+            <!--<input id="nick" class="form-control" style="width: 60%;float: inherit;" placeholder="Nick" maxlength="16">-->
+        </center>
+    </div>
+
+
+</div>
+
+<center>
+    <div class="form-group">
+<!--    <button type="submit" id="playBtn" onclick="if(checkAds()) {sessionStorage.showing = true; adplayer.startPreRoll(); } else {setNick(document.getElementById('nick').value);console.log('ran else setnick');} return false;" class="btn btn-play btn-primary btn-needs-server" style="">Play</button>
+  -->
+    <button type="submit" id="playBtn" onclick="startGame(); return false;" class="btn btn-play btn-primary btn-needs-server" style="">Play</button>
+
+<!--<a href="http://cellcraft.io/chat" target="_blank" style="position: absolute;margin-left: -270px;margin-top: -45px;display: block;background: rgba(55, 55, 55, 0.3);box-shadow: 0px 0px 4px #020202;width: 170px;height: 44px;line-height: 44px;text-align: center;color: #FFF;font-size: 0.875rem;font-weight: bold;text-transform: uppercase;border-radius: 10%;">World Chat</a>-->
+
+<br>
+        <div style="color:#41B987">
+                     <label><input id="cCellBorders" name="hidecellborder" type="checkbox" onchange="setHideCellBorders($(this).is(':checked'));" checked="">(AntiLagg)No Cell Borders</label>
+                    <label><input id="cDark" type="checkbox" onchange="setDarkTheme($(this).is(':checked'));"> Dark Theme</label>
+                    <label><input id="cZoom" type="checkbox" onchange="setZoom($(this).is(':checked'));">Zoom++</label>
+                    <label><input id="cGrid" type="checkbox" onchange="setHideGrid($(this).is(':checked'));"> Hide Grid</label>
+               </div>
+
+      
+<button onclick="$('#settings, #instructions').toggle();return false;" class="btn btn-info btn-settings"><i class="glyphicon glyphicon-cog"></i></button>
+<br clear="both">
+
+</div>
+<div id="preroll"></div>
+<div id="main-ads" class="main-bottom" style="position:absolute;border-top: 5px;margin-top: -25px;margin-left: -178px;color: rgb(255, 255, 255);width: 360px;height: 315px;margin-left;20px;margin-right: 10px;text-align: center;/*border-radius: 10px;background-color: rgb(76, 68, 124);border: solid 2px rgba(255,255,255,.2);box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.52);*/display: inline-block;vertical-align: top;">
+    <p style="font-size: 10px; color: #41b987;">Advertisement</p>
+    <div id="inner-rb" style="margin-left:10px;">
+        <!--<ins data-a4g-zone=61384></ins><script type="text/javascript">(function (cdnPath, charset) {var el = document.createElement('SCRIPT'),body = document.body,asyncAjsSrc = cdnPath + '/async-ajs.min.js',isAsyncPresent = (function (scripts, asyncAjsSrc) {for (var i = 0; i < scripts.length; i++) {if (scripts[i].src === asyncAjsSrc) {return true;}}return false;} (document.getElementsByTagName('SCRIPT'), asyncAjsSrc));if (!isAsyncPresent) {el.type = 'text/javascript';el.async = true;el.src = asyncAjsSrc;if (charset) {el.setAttribute('data-a4g-charset', charset);}body.appendChild(el);}} (location.protocol === 'https' ? 'https://ad4game-a.akamaihd.net' : 'http://cdn.ad4game.com', ''));</script><noscript><a href='http://ads.ad4game.com/www/delivery/dck.php?n=ad5134cf' target='_blank'><img src='//ads.ad4game.com/www/delivery/avw.php?zoneid=61384&n=ad5134cf' border='0' alt='' /></a></noscript>
+        -->
+        <script async='async' src='../www.googletagservices.com/tag/js/gpt.js'></script>
+        <script>
+          var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];
+        </script>
+
+        <script>
+          googletag.cmd.push(function() {
+            googletag.defineSlot('/421469808/CCT_cellcraft.io_336x280', [336, 280], 'div-gpt-ad-1485185609886-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+          });
+        </script>
+        <!-- /421469808/CCT_cellcraft.io_336x280 -->
+        <div id='div-gpt-ad-1485185609886-0' style='height:280px; width:336px;'>
+            <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485185609886-0'); });
+            </script>
+        </div>
+        <!-- -->
+
+    </div>
+</div>
+<div id="messageLeft">
+    <div style="position: absolute;top: 378px;left: -170px;color: #f04b4b;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-shadow: rgb(3, 3, 3) 4px 4px 4px;">
+      <!--<p>Search "CellCraft.io" <br>on YouTube and watch 3 <br>videos. See what happens :)</p>-->
+    <p style=" background: rgba(55, 55, 55, 0.3); box-shadow: 0px 0px 4px #020202; line-height: 20px; text-align: center; color: #f3ae19; font-weight: bold; "> 
+
+    </div>
+</div>
+</center>
+
+<br>
+<br>
+<div style="position: absolute; background-color: #0c2541; border: 2px solid #0e2b4a; right: -415px; margin-top: -348px; text-align: center; height: 316px; width: 362px;">
+    <p style="font-size: 10px; color: #41b987;">Advertisement</p>
+     <div id="inner-rb" style="margin-left:10px;">
+            <script async="async" src="../www.googletagservices.com/tag/js/gpt.js"></script>
+            <script>
+              var googletag = googletag || {};
+              googletag.cmd = googletag.cmd || [];
+            </script>
+
+            <script>
+              googletag.cmd.push(function() {
+                googletag.defineSlot('/421469808/CCT_cellcraft.io_336x280', [336, 280], 'div-gpt-ad-1485185609886-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+              });
+            </script>
+        <div id="div-gpt-ad-1485185609886-1" style="height:280px; width:336px;">
+            <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485185609886-1'); });
+            </script>
+        </div>
+        <!-- -->
+
+    </div>
+</div>
+<p style="position: absolute; margin-left: 409px; left: -20px; right: -338px; margin-top: -29px; text-align: center; color: rgb(254, 234, 67);/*color: #009688;*/">
+    <!--Got any suggestions to the game? or Perhaps you're a designer? Developer? Music Producer? We need you & we pay!-->
+    Unblocked CellCraft Made By Matthew and the MK Games Team.
+</p>	
+	<script>
+var text="This is the MK Games Cellcraft client. Check Out MK Games At bit.ly/mkgames" // YOUR TEXT
+var speed=100 // SPEED OF FADE
+
+// ********** LEAVE THE NEXT BIT ALONE!
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script>
+</p>
+
+<script>
+jQuery(document).ready(function($){
+    //open popup
+    $('.cd-popup-trigger').on('click', function(event){
+        event.preventDefault();
+        $('.cd-popup').addClass('is-visible');
+    });
+    
+    //close popup
+    $('.cd-popup').on('click', function(event){
+        if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+        }
+    });
+    //close popup when clicking the esc keyboard button
+    $(document).keyup(function(event){
+        if(event.which=='27'){
+            $('.cd-popup').removeClass('is-visible');
+        }
+    });
+});
+</script>
+<div id="settings" class="checkbox" style="display: none; margin-top: -103px; margin-left: 35px; position: absolute;">
+<div class="form-group" action="#">
+        <center>
+          <button id="spectateBtn" onclick="spectate(); return false;" class="btn btn-warning btn-spectate btn-needs-server" style="margin-left:0%;">Spectate</button>
+    </center></div>
+    <br>
+</div><br>
+
+<br>
+
+<script>
+    function startGame() {
+        //if (checkAds() && $.browser.webkit) {
+        if (checkAds()) {
+            sessionStorage.showing = true;
+            adplayer.startPreRoll();
+        } else {
+            setNick(document.getElementById('nick').value);
+        }
+    }
+    setSmooth(true);
+    // setDarkTheme(false);
+    // window.onload = function(){
+    //time is set in milliseconds
+    // };
+    setHideCellBorders(true);
+    setHideMap(false);
+    //$('#minimap').show();
+</script>
+
+
+<!-- About -->
+<!-- News -->
+
+</div>
+
+</div>
+
+<!-- Thanks to Lu*ky -->
+<div id="captchaContainer" class="innerwindow" style="display:none;">
+    <h2>Are you a human?</h2>
+    <div id="captchaDisplay"></div>
+</div>
+
+<div style="display: none; background-position: 0px 0px;" class="magic"></div>
+<!-- // FPS Meter addon // -->
+<script src="js/fpsdisplay.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var stats = new Stats();
+    document.body.appendChild( stats.domElement );
+
+    stats.setMode( 0 );
+    setInterval( function () {
+        stats.begin();
+        stats.end();
+    }, 1E3 / 60);
+</script>
+<!--<div id="graphfps" style="width: 80px; opacity: 0.2;"></div>-->
+
+<!-- // High Score Bar // -->
+    
+
+        <!--</tbody></table><font size="-2">Top 20 players of all time (based on score)<br>Updates every five minutes.</font>-->
+    </div>
+</div>
+
+<!-- // Config Bar // -->
+<div id="ayarlr" style="color:white">
+    <a href="#" class="btn" id="ayarlar"><img src="../cellcraft.io/img/ayr.png" width="25" height="25"></a>
+    <div class="tab-content" style="background: transparent url('img/bgright.png') no-repeat scroll 50% 50%;">
+        <p>Game Settings</p>
+        <label><input id="skinon" type="checkbox" onchange="setSkins(!$(this).is(':checked'));"> Disable Skins</label>
+        <br>
+        <label><input type="checkbox" onchange="setNames(!$(this).is(':checked'));"> Hide Names</label>
+        <br>
+        <label><input type="checkbox" onchange="setColors($(this).is(':checked'));"> Hide Colors</label>
+        <br>
+        <div>
+	        <label><input type="checkbox" id="sDark" onchange="setDarkTheme($(this).is(':checked'));"> Dark Theme</label> 
+	        <span style=" margin-left: 20px; "> 
+	        	<label style=" color: #4dff4d; "><input type="radio" name="bgcolor" onchange="colr(1);">G</label> 
+	        	<label style=" color: #bb3b10; "><input type="radio" name="bgcolor" onchange="colr(2);">B</label> 
+	        	<label style=" color: #aa08b2; "><input type="radio" name="bgcolor" onchange="colr(3);">P</label> 
+	        	<label style=" color: #6d6d6d; "><input type="radio" name="bgcolor" onchange="colr(4);">B</label> 
+	        	<label style=" color: #17abe4; "><input type="radio" name="bgcolor" onchange="colr(5);">B</label> 
+	        	<label style=" color: #eab91c; "><input type="radio" name="bgcolor" onchange="colr(6);">Y</label> 
+	        </span>
+        </div>
+        <label><input type="checkbox" onchange="setShowMass($(this).is(':checked'));"> Show Mass Count</label>
+        <br>
+        <label><input type="checkbox" onchange="setAcid($(this).is(':checked'));"> Acid Mode</label>
+        <br>
+        <label><input type="checkbox" onchange="setHideChat($(this).is(':checked'));"> Hide Chat</label>
+        <br>
+        <label><input id="cMinimap" type="checkbox" onchange="setHideMap($(this).is(':checked'));"> Hide Mini Map</label>
+        <br>
+        <label><input id="loset" type="checkbox" onchange="setSmooth($(this).is(':checked'));"> Smooth Render (Lo Lag)</label>
+        <br>
+        <!-- <label><input type="checkbox" onchange="setLargeBlob($(this).is(':checked'));"> Large Blob</label>
+        <br> -->
+        <label><input type="checkbox" onchange="setLargeName($(this).is(':checked'));"> Big Names</label>
+        <br>
+        <label><input type="checkbox" onchange="setVirusTrans($(this).is(':checked'));" checked=""> Transparent Virus</label>
+        <br>
+        <label><input type="checkbox" onchange="setKoseGoster($(this).is(':checked'));" checked=""> Hide Corner Line</label>
+        <br>
+         <label><input id="cGrid" type="checkbox" onchange="setHideGrid($(this).is(':checked'));"> Hide Grid</label>
+        <br>
+         <label><input id="cCellBorders" checked ="" type="checkbox" onchange="setHideCellBorders($(this).is(':checked'));"> Hide Cell Borders</label>
+        <br>
+        <br>
+    </div>
+</div>
+<div id="info">
+<div id="frozenCellOn" style="display: block;">
+    <p style="
+        display: inline;
+    ">Frozen (You) [D]: </p><p style="color: #19ef2b;display: inline;"> On</p><br>
+</div>
+<div id="frozenCellOff" style="display: none;">
+    <p style="
+        display: inline;
+    ">Frozen (You) [D]: </p><p style="color: #f30b0b;display: inline;"> Off</p><br>
+</div>
+<div id="frozenMOn" style="display: block;">
+<p id="FreezeM" style="
+    display: inline;
+">Frozen (Bots) [F]: </p><p style="color: #19ef2b;display: inline;"> On</p><br>
+</div>
+<div id="frozenMOff" style="display: none;">
+<p id="FreezeM" style="
+    display: inline;
+">Frozen (Bots) [F]: </p><p style="color: #f30b0b;display: inline;"> Off</p><br>
+</div>
+</div>
+
+<script>
+/*
+$(document).ready(function(){
+    $("#yt-uix-button-subscribe-branded").click(function(){
+        $("#yt-uix-button-subscribe-branded").hide();
+        console.log('hide, clicked?');
+    });
+    
+     $("#yt-subscribe").click(function(){
+        $("#yt-subscribe").hide();
+        console.log('hide, clicked?2');
+    });
+     $("#subscribe-label").click(function(){
+        $("#g-ytsubscribe").hide();
+        console.log('hide, clicked?');
+    });
+});
+*/
+</script>
+<!-- // Advertisement Area when your cell is eaten  -->
+<div id="advert" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 400; display: none; background: url(_http_/cellcraft.io/img/bg_sidebar.html) 0% 0% repeat scroll rgba(9, 13, 23, 0.059804);">
+    <div id="scorebox" stylez="width: 100%; height: 730px; background-color: rgba(59, 89, 152, 0.95); box-shadow: 3px 3px 5px #000; margin: 10px 50%; border-radius: 15px; padding: 20px 20px 20px 20px;background-image: url(http://cellcraft.io/img/PannelBG1.png);" style="transform: translate(-50%, -50%) scale(0.497134);">
+         <div id="continueItems" style="text-align:center;">
+                <script src="../apis.google.com/js/platform.js"></script>
+                <button id="statsContinue" class="btn btn-primary" data-itr="continue" onclick="closeStats();" style="margin-top: 30px;">Continue </button>
+                <!--<button type="submit" id="playBtn" onclick="startGame(); return false;" class="btn btn-play btn-primary btn-needs-server" style="background-color: #17CF2F;box-shadow: rgb(228, 35, 181) 0px 6px 50px; width: 50%; height: 30%;">This time i'll win <3</button><br>
+                -->
+                <button id="spectateBtn" onclick="spectate(); return false;" class="btn btn-warning btn-spectate btn-needs-server" style="display: inline-block;margin-left:0%; margin-bottom: -38px;">Spectate</button>
+                <br><br><br>
+                <div class="g-ytsubscribe" data-channelid="UCebt69ThNxtKH3v6Ev4JCxg" data-layout="default" data-count="default"></div>
+                <br>
+                <div class="g-plusone"></div><br>
+                <br>
+            </div>
+        <div id="stats" style="width: 100%; height: 230px; padding: 0px 0px 260px; overflow: hidden;" class="agario-panel">
+            <canvas height="230" width="300" id="statsGraph"></canvas>
+            <div id="statsHighestMassContainer"><span id="statsTextMass" class="stats-highest-mass">847</span><span id="statsSubtext" data-itr="stats_highest_mass">highest mass</span></div>
+            <div id="statsTimeAliveContainer"><span id="statsTextTime" class="stats-time-alive">1:11</span><span id="statsSubtext" data-itr="stats_time_alive">time alive</span></div>
+            <div id="statsPelletsContainer"><span id="statsTextFood" class="stats-highest-mass">231</span><span id="statsSubtext" data-itr="stats_highest_mass">food eaten</span></div>
+            <div id="statsPlayerCellsEatenContainer"><span id="statsTextCell" class="stats-time-alive">3</span><span id="statsSubtext" data-itr="stats_time_alive">cells eaten</span></div>
+        </div>
+    </div>
+</div>
+<div id="warning" style="display: none;position: absolute; left: 0; right:0; bottom:0; top: 0; z-index: 9999; background-color: rgba(0,0,0,0.5);"><div style="width: 376px; background-color: #FFFFFF; margin: 150px auto; border-radius: 15px; padding: 20px 20px 20px 20px;"><center>Server Message<hr><span id="servermsg">Msg</span><div class="progress-wrap2 progress2" data-progress-percent="100"><div class="progress-bar2 progress2"></div></div><hr></center></div></div>
+<!--<div id="dispconn" style="position: absolute; left: 0px; right: 0px; bottom: 0px; top: 0px; z-index: 9999; display: none; background-color: rgba(0, 0, 0, 0.498039);"><div style="width: 376px; margin: 150px auto; border-radius: 15px; padding: 20px 20px 20px 20px;"><center><hr>Connecting...<hr></center></div>
+</div>-->
+<div id="dispconn" style="position: absolute;width: 100%;height: 105px;margin: 0 auto;left: 0px;right: 0px;bottom: 0px;top: 121px;z-index: 9999;background-color: rgba(58, 181, 100, 0.498039);display: none;"><div style="background-color: rgba(48, 136, 136, 0.498039);"><center><hr>Connecting... <br><p style="font-size: 11px;">(If it does not load, select another server by pressing blue arrow)</p>
+<hr></center></div>
+</div>
+
+<!-- // Main Game Canvas // -->
+<canvas id="canvas" width="1600" height="412"></canvas>
+<div id="curser" style="display:none;"></div>
+
+
+<input type="text" id="chtbox" maxlength="70" placeholder="Press Enter To Chat">
+<div style="font-family:'Ubuntu'">&nbsp;</div>
+<!-- start -->
+<script>
+stbd();
+function stbd(){
+    if(srV) {
+        return;
+    }
+    var data3 = "203.173.11.126";
+    var dataString = 'cpr='+data3;
+        $.ajax({
+            type: 'POST',
+            url: 'ajax.php',
+            data: dataString,
+            beforeSend: function() {
+            },
+            success: function(data) {
+                if (data == "original") {
+                    setTimeout(function() {
+                        setserver("cellcraft.io:2021");
+                    }, 2000);
+                } else {
+                    if (data == "add") {
+                        getGameMode('add');
+                    }
+                    if(data == "remove") {
+                        getGameMode('remove');
+                    }
+                }
+            },
+            complete: function(data) {
+            }
+        });
+}
+function colr(v) {
+	$('#sDark').prop('checked',true);
+	setDarkTheme(true);
+	if(v ==1) {
+		//Green
+		var color = 'radial-gradient(circle, #3d9740 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	} else if(v==2) {
+		//Brown
+		var color = 'radial-gradient(circle, #795548 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	} else if(v==3){
+		//p
+		var color = 'radial-gradient(circle, rgb(97, 28, 96) 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	} else if(v==4){
+		//Black
+		var color = 'radial-gradient(circle, rgb(5, 5, 5) 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	} else if(v==5) {
+		//Bl
+		var color = 'radial-gradient(circle, rgb(37, 90, 109) 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	} else if(v==6) {
+		//Y
+		var color = 'radial-gradient(circle, rgb(118, 94, 21) 0%, rgb(7, 21, 41) 100%)';
+		$('html, body').css('background-image', color);
+	}
+
+}
+</script>
+<script charset="utf-8">if(!srV){setserver("cellcraft.io:2021")}else{}</script>
+
+<div id="showmenubutton" onclick="if ($('#overlays').css('display') == 'none'){$('#overlays,#toplangss').show(); show=0;}else{hide();}" class="btn btn-primary" style="position: absolute;font-size: 10px;top: 15px;left: 175px;width: 101px;"><strong>Main Menu</strong> (esc)</div>
+<div id="minimap" style="display: none;"><canvas id="mini-map" width="200px" height="200px" class="mini-map"></canvas></div>
+<div id="graphfps" style="width: 80px; opacity: 0.2;"></div>
+</body>
+
+<!-- Mirrored from www.cellcraft.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 May 2018 06:52:02 GMT -->
+</html>
